@@ -14,7 +14,7 @@ export class ProductsService {
             price: 19.99,
             stock: 12,
             category: "cuisine",
-            imageUrl: "https://via.placeholder.com/300x200?text=Gourde+inox"
+            imageUrl: "https://gaspajoe.fr/wp-content/uploads/2022/02/d31-a-1-scaled.jpg"
         },
         {
             id: 2,
@@ -23,7 +23,7 @@ export class ProductsService {
             price: 12.50,
             stock: 25,
             category: "maison",
-            imageUrl: "https://via.placeholder.com/300x200?text=Sac+coton+bio"
+            imageUrl: "https://d3b8u2qnhxi7re.cloudfront.net/img/mo6189_coloured_organic_cotton_tote_bags_140g_web_product_a.jpg_copy1.jpg"
         },
         {
             id: 3,
@@ -32,7 +32,7 @@ export class ProductsService {
             price: 5.99,
             stock: 0,
             category: "bien-être",
-            imageUrl: "https://via.placeholder.com/300x200?text=Savon+lavande"
+            imageUrl: "https://geodora-parfums.com/wp-content/uploads/2021/08/SavonsSolides-HD-web-1-scaled.jpg"
         },
         {
             id: 4,
@@ -41,7 +41,7 @@ export class ProductsService {
             price: 3.50,
             stock: 40,
             category: "bien-être",
-            imageUrl: "https://via.placeholder.com/300x200?text=Brosse+bambou"
+            imageUrl: "https://www.savondujura.fr/wp-content/uploads/2021/06/brosse-a-dent-scaled-jpg.webp"
         },
         {
             id: 5,
@@ -50,7 +50,7 @@ export class ProductsService {
             price: 14.90,
             stock: 18,
             category: "cuisine",
-            imageUrl: "https://via.placeholder.com/300x200?text=Lunch+box+verre"
+            imageUrl: "https://www.garboglass.com/data/upload/ueditor/20250328/67e65ad81f626.jpg"
         },
         {
             id: 6,
@@ -59,7 +59,7 @@ export class ProductsService {
             price: 16.00,
             stock: 5,
             category: "maison",
-            imageUrl: "https://via.placeholder.com/300x200?text=Tote+bag"
+            imageUrl: "https://himalayan-made.fr/wp-content/uploads/2021/07/tote-bag-reversible-chanvre-upcycling-latika-ecru-3.jpg"
         },
         {
             id: 7,
@@ -68,7 +68,7 @@ export class ProductsService {
             price: 8.90,
             stock: 9,
             category: "bien-être",
-            imageUrl: "https://via.placeholder.com/300x200?text=Huile+orange"
+            imageUrl: "https://www.mielcretet.com/img/cms/huile%20essentielle/ORANGE_douce.png"
         },
         {
             id: 8,
@@ -77,7 +77,7 @@ export class ProductsService {
             price: 6.50,
             stock: 22,
             category: "cuisine",
-            imageUrl: "https://via.placeholder.com/300x200?text=Couverts+bambou"
+            imageUrl: "https://mybambou.com/cdn/shop/files/couvert.jpg?v=1693910508&width=800"
         },
         {
             id: 9,
@@ -86,7 +86,7 @@ export class ProductsService {
             price: 9.90,
             stock: 15,
             category: "maison",
-            imageUrl: "https://via.placeholder.com/300x200?text=Bougie+vanille"
+            imageUrl: "https://gemmes-zen.com/10191-large_default/bougie-cire-de-soja-vanille.jpg"
         },
         {
             id: 10,
@@ -95,7 +95,7 @@ export class ProductsService {
             price: 4.99,
             stock: 30,
             category: "cuisine",
-            imageUrl: "https://via.placeholder.com/300x200?text=Infuseur+th%C3%A9"
+            imageUrl: "https://infuseur-a-the.com/wp-content/uploads/2024/08/Infuseur-a-the-inox.png"
         }
     ];
 
