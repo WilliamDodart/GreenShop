@@ -1,3 +1,5 @@
+@use '../../../variables' as v;
+
 .header {
     position: absolute;
     z-index: 5;
@@ -19,8 +21,78 @@
     }
     
     &__title {
-        margin-left: 3rem;
+        margin-left: 2.5rem;
         font-size: 2.5rem;
-        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: italic;
     }
+
+    &__nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        top : 55px;
+        right: 50%;
+        transform: translate(50%, 0%);
+        background-color: v.$white;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    &__link {
+        font-size: 2rem;
+        margin-top: 1rem;
+        cursor: pointer;
+
+        &:last-child {
+            margin-bottom: 1rem;
+        }
+    }
+
+    nav.open {
+        display: flex;
+    }
+}
+
+@media screen and (min-width : 768px) {
+    .header {
+
+        &__button-menu {
+            display: none;
+        }
+
+        &__nav {
+            display: flex;
+            flex-direction: row;
+            background: none;
+            position: relative;
+            transform: none;
+            width: auto;
+            top: 0;
+            left: 0;
+            display: block;
+            box-shadow: none;
+        }
+
+        &__link {
+            margin-right: 4rem;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &__title {
+            margin-left: 0;
+            font-size: 3rem;
+        }
+
+        &__cart {
+            font-size: 2rem;
+    }
+    }
+    
 }
