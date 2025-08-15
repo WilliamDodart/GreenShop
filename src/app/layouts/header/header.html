@@ -6,16 +6,16 @@
     </button>
     
     <!-- Logo -->
-    <a href="" class="header__title">GreenShop</a>
+    <a routerLink="" class="header__title">GreenShop</a>
     
     <!-- Menu -->
     <nav [class.open]="isMenuOpen" class="header__nav">   
-        <a href="" class="header__link">Accueil</a>
-        <a href="" class="header__link">Produits</a>
-        <a href="" class="header__link">Contact</a>
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="header__link">Accueil</a>
+        <a routerLink="produits" routerLinkActive="active" class="header__link">Produits</a>
+        <a routerLink="contact" routerLinkActive="active" class="header__link">Contact</a>
     </nav>
     
     <!-- Panier -->
-    <a href="" class="header__cart" >Panier (0)</a>
+    <a routerLink="panier" class="header__cart" >Panier (0)</a>
     
 </header>

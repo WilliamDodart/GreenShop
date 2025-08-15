@@ -55,6 +55,10 @@
     nav.open {
         display: flex;
     }
+
+    .active {
+        border-bottom: 1px solid;
+    }
 }
 
 @media screen and (min-width : 768px) {
