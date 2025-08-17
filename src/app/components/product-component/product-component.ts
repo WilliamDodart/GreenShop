@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ProductModel } from '../../models/product.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-component',
@@ -9,6 +10,13 @@ import { ProductModel } from '../../models/product.model';
 })
 export class ProductComponent {
 
- @Input() product!: ProductModel;
+  @Input() product!: ProductModel;
+
+  constructor(private router: Router) {}
+
+  public showProductPage(): void {
+    this.router.navigateByUrl(`produits/${this.product.id}`)
+  }
+
 
 }

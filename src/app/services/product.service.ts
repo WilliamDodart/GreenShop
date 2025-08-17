@@ -103,4 +103,12 @@ export class ProductsService {
         return[...this.products];
     }
 
+    getOneProductById(productId: number): ProductModel {
+        const curentProduct: ProductModel | undefined = this.products.find(product => product.id === Number(productId));
+        if (!curentProduct) {
+            throw new Error ('Produit inconnu');
+        }
+        return curentProduct;
+    }
+
 }
