@@ -1,0 +1,20 @@
+<section class="product-filter">
+    <div class="product-filter__container" role="group" aria-label="Filtrer par catégorie">
+        <button class="product-filter__button" type="button">Tous</button>
+        <button class="product-filter__button" type="button">Cuisine</button>
+        <button class="product-filter__button" type="button">Maison</button>
+        <button class="product-filter__button" type="button">Bien-être</button>
+    </div>
+</section>
+
+
+<section class="all-products">
+ 
+    <div class="all-products__list">
+
+        @for (product of products; track product.id) {
+            <app-product-component [product]="product" class="all-products__card"/>
+        }
+
+    </div>
+</section>
