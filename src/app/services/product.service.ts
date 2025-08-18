@@ -111,4 +111,18 @@ export class ProductsService {
         return curentProduct;
     }
 
+    getThreeRandomProducts(): ProductModel[] {
+        let productsCopy = [...this.products]
+        let threeRandomsProducts : ProductModel[] = [];
+
+        for (let i = 0; i < 3; i++) {
+            const randomIndex = Math.floor(Math.random() * productsCopy.length);
+            const randomProduct = productsCopy[randomIndex];
+            threeRandomsProducts.push(randomProduct);
+            productsCopy.splice(randomIndex, 1)
+        }
+
+        return threeRandomsProducts;
+    }
+
 }
