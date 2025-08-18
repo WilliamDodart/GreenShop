@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ButtonBack } from '../../components/button-back/button-back';
 import { ProductModel } from '../../models/product.model';
-import { DecimalPipe } from '@angular/common';
+import { CartCard } from '../../components/cart-card/cart-card';
+import { CartSummary } from '../../components/cart-summary/cart-summary';
 
 @Component({
   selector: 'app-cart-page',
   imports: [ ButtonBack,
-             DecimalPipe
+             CartCard,
+             CartSummary
   ],
   templateUrl: './cart-page.html',
   styleUrl: './cart-page.scss'

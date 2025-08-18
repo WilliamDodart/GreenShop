@@ -1,50 +1,17 @@
 <section class="cart">
-    <app-button-back/>
+    
+    <app-button-back class="back-button"/>
+    <h2 class="cart__title">Votre panier :</h2>
 
-    <div class="cart__review">
-        <h2 class="cart__title">Votre panier :</h2>
+    <div class="cart__container">
         <div class="cart__list">
             @for(product of products; track product.id) {   
-                <div class="cart__card card">
-                    <button class="card__delete-button">
-                        <span class="material-icons">delete</span>
-                    </button>
-                    <img class="card__image" [src]="product.imageUrl" [alt]="product.name">
-                    <div class="card__right-section right-section">
-                        <div class="right-section__text">
-                            <h3 class="right-section__title">{{product.name}}</h3>
-                            <p class="right-section__category"><span>Catégorie : </span>{{product.category}}</p>
-                        </div>
-                        <div class="right-section__purchase">
-                            <h4 class="right-section__price">{{product.price | number : '1.2-2'}} €</h4>
-                            <div class="right-section__handler">
-                                <button class="right-section__button--more">+</button>
-                                <p class="right-section__quantity">0</p>
-                                <button class="right-section__button--less">-</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <app-cart-card class="app-cart-card" [product]="product"/>
                 <div class="cart__separator"></div>
             }
         </div>
-    </div>
-
-    <div class="cart__summary summary">
-        <h3 class="summary__title">Votre commande :</h3>
-        <div class="summary__container">
-            <p class="summary__key">Sous-total</p>
-            <p class="summary__value">Valeur</p>
-        </div>
-        <div class="summary__container">
-            <p class="summary__key">Réduction</p>
-            <p class="summary__value">Valeur</p>
-        </div>
-        <div class="summary__container">
-            <p class="summary__key">Total</p>
-            <p class="summary__value">Valeur</p>
-        </div>
-        <button class="summary__button">Accéder au paiement</button>
+        
+        <app-cart-summary class="app-cart-summary"/>
     </div>
 
 </section>
