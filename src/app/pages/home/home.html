@@ -10,41 +10,12 @@
 
 <section class="popular-products">
     <h2 class="popular-products__title">Nos Produits Populaires</h2>
+
     <div class="popular-products__list">
-        <div class="popular-products__card product-card">
-            <button class="product-card__button">Ajouter au panier</button>
-            <img class="product-card__image" src="assets/images/soin.jpg" alt="Un savon posé sur les feuilles d'une plante">
-            <div class="product-card__container">
-            <div class="product-card__text">
-                <h3 class="product-card__title">Savon à l'orange douce</h3>
-                <p class="product-card__description">Savon bio et éco éco-responsable aux vertues apaisantes.</p>
-            </div>
-            <p class="product-card__price">8.90 €</p>
-            </div>
-        </div>
 
-        <div class="popular-products__card product-card">
-            <button class="product-card__button">Ajouter au panier</button>
-            <img class="product-card__image" src="assets/images/maquillage.jpg" alt="Un savon posé sur les feuilles d'une plante">
-            <div class="product-card__container">
-            <div class="product-card__text">
-                <h3 class="product-card__title">Savon à l'orange douce</h3>
-                <p class="product-card__description">Savon bio et éco éco-responsable aux vertues apaisantes.</p>
-            </div>
-            <p class="product-card__price">8.90 €</p>
-            </div>
-        </div>
-
-        <div class="popular-products__card product-card">
-            <button class="product-card__button">Ajouter au panier</button>
-            <img class="product-card__image" src="assets/images/tasse.jpg" alt="Un savon posé sur les feuilles d'une plante">
-            <div class="product-card__container">
-            <div class="product-card__text">
-                <h3 class="product-card__title">Savon à l'orange douce</h3>
-                <p class="product-card__description">Savon bio et éco éco-responsable aux vertues apaisantes.</p>
-            </div>
-            <p class="product-card__price">8.90 €</p>
-            </div>
-        </div>
+        @for(product of products; track product.id) {
+            <app-product-component [product]="product" class="popular-products__card" />
+        }
+        
     </div>
 </section>
