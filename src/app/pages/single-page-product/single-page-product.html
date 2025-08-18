@@ -1,11 +1,17 @@
 <div class="single-page">
-    <button (click)="backToPreviousPage()">Retour</button>
-    <img class="single-page__image" [src]="product.imageUrl" [alt]="product.name">
+    <button class="single-page__button" (click)="backToPreviousPage()">Retour</button>
     <div class="single-page__container">
-        <div class="single-page__text">
-            <h3 class="single-page__title">{{product.name}}</h3>
-            <p class="single-page__description">{{product.description}}</p>
+        <img class="single-page__image" [src]="product.imageUrl" [alt]="product.name">
+        <div class="single-page__right-element">
+            <div class="single-page__text">
+                <h3 class="single-page__title">{{product.name}}</h3>
+                <p class="single-page__description">{{product.description}}</p>
+            </div>
+            <div class="single-page__infos">
+                <p class="single-page__category">{{product.category}}</p>
+                <p class="single-page__price">{{product.price | number: '1.2-2'}} €</p>
+            </div>
+            <button class="single-page__add-cart"> Ajouter au panier</button>
         </div>
-        <p class="single-page__price">{{product.price}} €</p>
     </div>
 </div>
