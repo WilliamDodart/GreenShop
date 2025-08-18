@@ -24,6 +24,7 @@ body {
   line-height: 1.5;
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+  background-color: v.$white;
 }
 
 /* 5. Improve media defaults */
@@ -57,9 +58,16 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-body {
-    background-color: v.$white;
-    padding: 1rem;
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
 }
 
 section {
