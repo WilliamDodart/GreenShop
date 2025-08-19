@@ -16,7 +16,18 @@
         background: none;
         box-shadow: none;
         font-size: 1.5rem;
+        border-radius: 5px;
+        color: v.$darkgrey;
+        &:hover {
+            color: v.$black;
+            box-shadow: inset 0px 2px 8px rgba(0,0,0,0.05);
+        }
     }
+
+    // .active {
+    //     color: v.$black;
+    //     border: 1px solid v.$darkgrey;
+    // }
 }
 
 @media screen and (min-width: 768px) {

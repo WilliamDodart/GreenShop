@@ -103,6 +103,17 @@ export class ProductsService {
         return[...this.products];
     }
 
+    getAllCategories(): string[] {
+        let categories = ['tous'];
+        for (const product of this.products) {
+            const duplicateCategory = categories.find((category) => category === product.category)
+            if (!duplicateCategory) {
+                categories.push(product.category);
+            }
+        }
+        return categories;
+    }
+
     getOneProductById(productId: number): ProductModel {
         const curentProduct: ProductModel | undefined = this.products.find(product => product.id === Number(productId));
         if (!curentProduct) {
@@ -121,7 +132,6 @@ export class ProductsService {
             threeRandomsProducts.push(randomProduct);
             productsCopy.splice(randomIndex, 1)
         }
-
         return threeRandomsProducts;
     }
 
