@@ -2,12 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductModel } from '../../models/product.model';
 import { ProductsService } from '../../services/product.service';
-import { DecimalPipe, Location } from '@angular/common';
+import { DecimalPipe } from '@angular/common';
+import { ButtonBack } from '../../components/button-back/button-back';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-single-page-product',
   imports: [
-    DecimalPipe
+    DecimalPipe,
+    ButtonBack
   ],
   templateUrl: './single-page-product.html',
   styleUrl: './single-page-product.scss'
@@ -18,7 +21,7 @@ export class SinglePageProduct implements OnInit{
 
   constructor(private route: ActivatedRoute,
               private productService: ProductsService,
-              private location: Location ) {}
+              private cartService: CartService) {}
 
   ngOnInit(): void {
     this.getProduct();
@@ -29,9 +32,8 @@ export class SinglePageProduct implements OnInit{
     this.product = this.productService.getOneProductById(productId);
   }
 
-  //navigation arrière
-  backToPreviousPage(): void {
-    this.location.back();
+  addProductToCart(product: ProductModel) {
+    this.cartService.addToCart(product)
   }
 
 }

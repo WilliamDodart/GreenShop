@@ -1,0 +1,84 @@
+@use '../../../variables' as v;
+
+.cart {
+    margin: 7rem auto 0 auto;
+    width: 100%;
+    max-width: 747px;
+    
+    &__title {
+        
+        margin: 3rem 0 1rem 0;
+        font-size: 2rem;
+    }
+
+    &__list {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid v.$grey;
+        border-radius: 10px;
+    }
+
+    &__separator {
+        width : 100%;
+        height: 1px;
+        background-color: v.$grey;
+        margin: 2rem 0;
+        &:last-child {
+            display: none;
+        }
+    }
+}
+
+.empty-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
+    width: 100%;
+
+    &__link {
+        background-color: v.$green;
+        color: v.$white;
+        font-size: 2rem;
+        padding: 0.5rem 3rem;
+        border-radius: 10px;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (min-width : 1340px) {
+
+    .cart {
+        max-width: 85%;
+        
+        &__container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__list {
+            width: 60%;
+            align-self: flex-start;
+        }
+    }
+
+    .app-cart-summary {
+        width: 35%;
+    }
+
+    .empty-cart {
+        &__title {
+            font-size: 2.5rem;
+        }
+
+        &__text {
+            font-size: 2rem;
+        }
+
+        &__link {
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+    }
+}

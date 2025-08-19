@@ -1,0 +1,20 @@
+<div class="cart__card card">
+    <button class="card__delete-button" (click)="removeProduct(product.id)" >
+        <span class="material-icons">delete</span>
+    </button>
+    <img class="card__image" [src]="product.imageUrl" [alt]="product.name">
+    <div class="card__right-section right-section">
+        <div class="right-section__text">
+            <h3 class="right-section__title">{{product.name}}</h3>
+            <p class="right-section__category"><span>Catégorie : </span>{{product.category}}</p>
+        </div>
+        <div class="right-section__purchase">
+            <h4 class="right-section__price">{{product.price | number : '1.2-2'}} €</h4>
+            <div class="right-section__handler">
+                <button class="right-section__button--more" (click)="increaseQuantity(product.id)">+</button>
+                <p class="right-section__quantity">{{quantity}}</p>
+                <button class="right-section__button--less" (click)="decreaseQuantity(product.id)">-</button>
+            </div>
+        </div>
+    </div>
+</div>
