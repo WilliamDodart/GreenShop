@@ -11,7 +11,7 @@
                 <p class="single-page__category">{{product.category}}</p>
                 <p class="single-page__price">{{product.price | number: '1.2-2'}} €</p>
             </div>
-            <button class="single-page__add-cart"> Ajouter au panier</button>
+            <button class="single-page__add-cart" (click)="addProductToCart(product)" > Ajouter au panier</button>
         </div>
     </div>
 </div>

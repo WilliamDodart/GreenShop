@@ -5,8 +5,8 @@
 
     <div class="cart__container">
         <div class="cart__list">
-            @for(product of products; track product.id) {   
-                <app-cart-card class="app-cart-card" [product]="product"/>
+            @for(entity of cart$ | async ; track entity.product.id) {   
+                <app-cart-card class="app-cart-card" [product]="entity.product" [quantity]="entity.quantity"/>
                 <div class="cart__separator"></div>
             }
         </div>

@@ -4,6 +4,7 @@ import { ProductModel } from '../../models/product.model';
 import { ProductsService } from '../../services/product.service';
 import { DecimalPipe } from '@angular/common';
 import { ButtonBack } from '../../components/button-back/button-back';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-single-page-product',
@@ -19,7 +20,8 @@ export class SinglePageProduct implements OnInit{
   product!: ProductModel;
 
   constructor(private route: ActivatedRoute,
-              private productService: ProductsService ) {}
+              private productService: ProductsService,
+              private cartService: CartService) {}
 
   ngOnInit(): void {
     this.getProduct();
@@ -28,6 +30,10 @@ export class SinglePageProduct implements OnInit{
   private getProduct() {
     const productId = this.route.snapshot.params['id'];
     this.product = this.productService.getOneProductById(productId);
+  }
+
+  addProductToCart(product: ProductModel) {
+    this.cartService.addToCart(product)
   }
 
 }
