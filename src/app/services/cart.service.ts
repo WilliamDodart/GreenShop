@@ -2,16 +2,20 @@ import { Injectable } from "@angular/core";
 import { ProductModel } from "../models/product.model";
 import { BehaviorSubject } from "rxjs";
 import { CartProductModel } from "../models/cart-product.model";
+import { ToastService } from "./toast.service";
 
 @Injectable({
     providedIn: 'root'
 })
 
 export class CartService {
-    private cartProducts: CartProductModel[] = [];
-    private cartSubject = new BehaviorSubject<CartProductModel[]>([]);;
 
-    cart$ = this.cartSubject.asObservable(); 
+    private cartProducts: CartProductModel[] = [];
+    private cartSubject = new BehaviorSubject<CartProductModel[]>([]);
+
+    cart$ = this.cartSubject.asObservable();
+
+    constructor(private toastService: ToastService) {}
 
     addToCart(product: ProductModel): void {
         const currentProduct = this.cartProducts.find(p => p.product.id === product.id)
@@ -20,6 +24,7 @@ export class CartService {
         } else {
             this.cartProducts.push({product, quantity: 1});
         }
+        this.toastService.show('Produit ajouté au panier !', 'success');
         this.cartSubject.next(this.cartProducts);
     }
 
