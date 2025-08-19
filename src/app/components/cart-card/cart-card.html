@@ -11,9 +11,9 @@
         <div class="right-section__purchase">
             <h4 class="right-section__price">{{product.price | number : '1.2-2'}} €</h4>
             <div class="right-section__handler">
-                <button class="right-section__button--more">+</button>
+                <button class="right-section__button--more" (click)="increaseQuantity(product.id)">+</button>
                 <p class="right-section__quantity">{{quantity}}</p>
-                <button class="right-section__button--less">-</button>
+                <button class="right-section__button--less" (click)="decreaseQuantity(product.id)">-</button>
             </div>
         </div>
     </div>

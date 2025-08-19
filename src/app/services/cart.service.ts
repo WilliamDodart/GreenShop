@@ -32,7 +32,29 @@ export class CartService {
         return this.cartProducts;
     }
 
-    getTotal(): number {
-        return 15;
+    getSubtotal(): number {
+        return this.cartProducts.reduce((acc, p) => acc + (p.product.price * (p.quantity)), 0);
+    }
+
+    increaseProductQuantity(productId: number): void {
+        const currentProduct = this.cartProducts.find(p => p.product.id === productId);
+        if (currentProduct) {
+            currentProduct.quantity++;
+            this.cartSubject.next(this.cartProducts);
+        } else {
+            throw new Error ('Aucun produit trouvé');
+        }
+    }
+
+    decreaseProductQuantity(productId: number): void {
+        const currentProduct = this.cartProducts.find(p => p.product.id === productId);
+        if (currentProduct && currentProduct.quantity > 0) {
+            currentProduct.quantity--;
+            this.cartSubject.next(this.cartProducts);
+        } else if (currentProduct && currentProduct.quantity === 0) {
+            throw new Error ('Aucune quantité de ce produit');
+        } else {
+            throw new Error ('Aucun produit trouvé');
+        }
     }
 }

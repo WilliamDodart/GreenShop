@@ -19,11 +19,8 @@ import { AsyncPipe } from '@angular/common';
 
 export class CartPage {
   cart$;
-  total = 0
 
   constructor(private cartService: CartService) {
     this.cart$ = this.cartService.cart$
-
-    this.cart$.subscribe(cart => this.total = this.cartService.getTotal());
   };
 }

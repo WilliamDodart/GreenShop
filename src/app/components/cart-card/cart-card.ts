@@ -20,4 +20,12 @@ export class CartCard {
   removeProduct(id: number) {
     this.cartService.removeFromCart(id);
   }
+
+  increaseQuantity(id: number) {
+    this.cartService.increaseProductQuantity(id);
+  }
+
+  decreaseQuantity(id: number) {
+    this.cartService.decreaseProductQuantity(id);
+  }
 }
