@@ -3,7 +3,13 @@
     <div class="product-filter__container" role="group" aria-label="Filtrer par catégorie">
 
         @for (category of categories; track category) {
-            <button class="product-filter__button" type="button" (click)="changeFilter(category)" >{{category | titlecase}}</button>
+            <button
+                [ngClass]="{active: category === currentCategory}" 
+                class="product-filter__button"
+                type="button"
+                (click)="changeFilter(category)">
+                    {{category | titlecase}}
+            </button>
         }
 
     </div>
