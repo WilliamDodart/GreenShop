@@ -44,12 +44,27 @@
 
     &__link {
         font-size: 2rem;
+        padding: 0.5rem 2rem;
         margin-top: 1rem;
         cursor: pointer;
-
+        border-radius: 5px;
+        color: v.$darkgrey;
+        
         &:last-child {
             margin-bottom: 1rem;
         }
+    }
+    
+    &__cart {
+        border-radius: 5px;
+        color: v.$darkgrey;
+        padding: 0.5rem 2rem;
+    }
+
+    &__link:hover,
+    &__cart:hover {
+        color: v.$black;
+        box-shadow: inset 0px 2px 8px rgba(0,0,0,0.05);
     }
 
     nav.open {
@@ -57,7 +72,8 @@
     }
 
     .active {
-        border-bottom: 1px solid;
+        color: v.$black;
+        border: 1px solid v.$darkgrey;
     }
 }
 
@@ -82,7 +98,7 @@
         }
 
         &__link {
-            margin-right: 4rem;
+            margin-right: 2rem;
 
             &:last-child {
                 margin: 0;
