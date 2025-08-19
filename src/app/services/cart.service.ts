@@ -32,6 +32,10 @@ export class CartService {
         return this.cartProducts;
     }
 
+    getNumberOfProducts(): number {
+        return this.cartProducts.reduce((accumulator, currentProduct) => accumulator + (currentProduct.quantity), 0);
+    }
+
     getSubtotal(): number {
         return this.cartProducts.reduce((acc, p) => acc + (p.product.price * (p.quantity)), 0);
     }
