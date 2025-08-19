@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 import { DecimalPipe } from '@angular/common';
 
@@ -10,6 +10,7 @@ import { DecimalPipe } from '@angular/common';
 })
 
 export class CartSummary {
+  @Input() nbProduct!: number;
   cart$;
   subtotal = 0;
   delivery = 0;

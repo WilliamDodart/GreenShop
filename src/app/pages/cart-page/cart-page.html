@@ -2,16 +2,24 @@
     
     <app-button-back class="back-button"/>
     <h2 class="cart__title">Votre panier :</h2>
-
     <div class="cart__container">
-        <div class="cart__list">
-            @for(entity of cart$ | async ; track entity.product.id) {   
-                <app-cart-card class="app-cart-card" [product]="entity.product" [quantity]="entity.quantity"/>
-                <div class="cart__separator"></div>
-            }
-        </div>
+
+        @if(nbProduct > 0) {
+            <div class="cart__list">
+                @for(entity of cart$ | async ; track entity.product.id) {   
+                    <app-cart-card class="app-cart-card" [product]="entity.product" [quantity]="entity.quantity"/>
+                    <div class="cart__separator"></div>
+                }
+            </div>
+        } @else {
+            <div class="empty-cart">
+                <h3 class="empty-cart__title">Votre panier est vide !</h3>
+                <p class="empty-cart__text">Trouvez des articles qui vous correspondent</p>
+                <a routerLink="/produits" class="empty-cart__link">Voir la boutique</a>
+            </div>
+        }
         
-        <app-cart-summary class="app-cart-summary"/>
+        <app-cart-summary class="app-cart-summary" [nbProduct]='nbProduct'/>
     </div>
 
 </section>

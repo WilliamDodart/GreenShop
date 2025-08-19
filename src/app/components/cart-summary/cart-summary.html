@@ -13,5 +13,7 @@
         <p class="summary__key summary__key--total">Total</p>
         <p class="summary__value summary__value--total">{{total | number : '1.2-2'}} €</p>
     </div>
-    <button class="summary__button">Accéder au paiement <span class="material-icons">start</span></button>
+    @if(nbProduct > 0) {
+        <button class="summary__button">Accéder au paiement <span class="material-icons">start</span></button>
+    }
 </div>
