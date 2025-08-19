@@ -1,5 +1,5 @@
 <div class="product-card" (click)="showProductPage()">
-    <button class="product-card__button">Ajouter au panier</button>
+    <button class="product-card__button" (click)="addToCart($event)">Ajouter au panier</button>
     <img class="product-card__image" [src]="product.imageUrl" [alt]="product.name">
     <div class="product-card__container">
         <div class="product-card__text">
