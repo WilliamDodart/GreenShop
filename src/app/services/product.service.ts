@@ -32,7 +32,7 @@ export class ProductsService {
             price: 5.99,
             stock: 0,
             category: "bien-être",
-            imageUrl: "https://geodora-parfums.com/wp-content/uploads/2021/08/SavonsSolides-HD-web-1-scaled.jpg"
+            imageUrl: "https://chezcelita.fr/wp-content/uploads/2023/11/savon-lavande-2.jpg"
         },
         {
             id: 4,
