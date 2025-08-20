@@ -1,16 +1,19 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-cart-summary',
-  imports: [DecimalPipe],
+  imports: [
+    DecimalPipe,
+  ],
   templateUrl: './cart-summary.html',
   styleUrl: './cart-summary.scss'
 })
 
 export class CartSummary {
   @Input() nbProduct!: number;
+  @Output() openModal = new EventEmitter<void>();
   cart$;
   subtotal = 0;
   delivery = 0;

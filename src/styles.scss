@@ -14,7 +14,8 @@
 
 /*Définis 1rem à 10px*/ 
 html {
-	font-size: 0.625rem
+	font-size: 0.625rem;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -59,8 +60,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html, body {
+  width: 100%;
   height: 100%;
   margin: 0;
+  //overflow-x: hidden;
 }
 
 app-root {

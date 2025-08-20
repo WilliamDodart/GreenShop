@@ -32,7 +32,7 @@ export class ProductsService {
             price: 5.99,
             stock: 0,
             category: "bien-être",
-            imageUrl: "https://geodora-parfums.com/wp-content/uploads/2021/08/SavonsSolides-HD-web-1-scaled.jpg"
+            imageUrl: "https://chezcelita.fr/wp-content/uploads/2023/11/savon-lavande-2.jpg"
         },
         {
             id: 4,
@@ -103,6 +103,17 @@ export class ProductsService {
         return[...this.products];
     }
 
+    getAllCategories(): string[] {
+        let categories = ['tous'];
+        for (const product of this.products) {
+            const duplicateCategory = categories.find((category) => category === product.category)
+            if (!duplicateCategory) {
+                categories.push(product.category);
+            }
+        }
+        return categories;
+    }
+
     getOneProductById(productId: number): ProductModel {
         const curentProduct: ProductModel | undefined = this.products.find(product => product.id === Number(productId));
         if (!curentProduct) {
@@ -121,7 +132,6 @@ export class ProductsService {
             threeRandomsProducts.push(randomProduct);
             productsCopy.splice(randomIndex, 1)
         }
-
         return threeRandomsProducts;
     }
 

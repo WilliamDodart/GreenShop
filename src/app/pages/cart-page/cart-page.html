@@ -1,6 +1,9 @@
 <section class="cart">
     
     <app-button-back class="back-button"/>
+    
+    <app-purchase-modal [isVisible]="showModal" (closeModal)="toggleModal()" />
+
     <h2 class="cart__title">Votre panier :</h2>
     <div class="cart__container">
 
@@ -19,7 +22,7 @@
             </div>
         }
         
-        <app-cart-summary class="app-cart-summary" [nbProduct]='nbProduct'/>
+        <app-cart-summary class="app-cart-summary" [nbProduct]='nbProduct' (openModal)="toggleModal()" />
     </div>
 
 </section>

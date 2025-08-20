@@ -5,14 +5,16 @@ import { CartSummary } from '../../components/cart-summary/cart-summary';
 import { CartService } from '../../services/cart.service';
 import { AsyncPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { PurchaseModal } from "../../components/purchase-modal/purchase-modal";
 
 @Component({
   selector: 'app-cart-page',
-  imports: [ ButtonBack,
-             CartCard,
-             CartSummary,
-             AsyncPipe,
-             RouterLink
+  imports: [ButtonBack,
+    CartCard,
+    CartSummary,
+    AsyncPipe,
+    RouterLink,
+    PurchaseModal
   ],
   templateUrl: './cart-page.html',
   styleUrl: './cart-page.scss'
@@ -21,6 +23,7 @@ import { RouterLink } from '@angular/router';
 export class CartPage {
   cart$;
   nbProduct = 0;
+  showModal = false;
 
   constructor(private cartService: CartService) {
     this.cart$ = this.cartService.cart$
@@ -28,4 +31,8 @@ export class CartPage {
       this.nbProduct = (this.cartService.getCartProducts()).length;
     })
   };
+
+  toggleModal(): void {
+    this.showModal = !this.showModal;
+  }
 }

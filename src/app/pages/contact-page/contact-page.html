@@ -1,0 +1,30 @@
+<section class="contact">
+  <h1 class="contact__title">Contactez-nous</h1>
+  <p class="contact__intro">
+    Une question, une suggestion ou juste envie d’échanger ?  
+    N’hésitez pas à nous écrire, nous vous répondrons rapidement
+  </p>
+
+  <div class="contact__container">
+    
+    <form #myForm="ngForm" class="contact__form" (ngSubmit)="onSubmit(myForm)">
+      <label for="name">Nom</label>
+      <input id="name" name="name" type="text" placeholder="Votre nom" ngModel required />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="Votre email" ngModel required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Votre message..." ngModel required></textarea>
+
+      <button type="submit" class="contact__button">Envoyer</button>
+    </form>
+
+    <div class="contact__info info">
+      <h2 class="info__title">Nos coordonnées</h2>
+      <p class="info__text"><strong>Email :</strong> contact@greenshop.com</p>
+      <p class="info__text"><strong>Téléphone :</strong> +33 6 12 34 56 78 99</p>
+      <p class="info__text"><strong>Adresse :</strong> 9 Moutain Drive, 01000 Gotham City</p>
+    </div>
+  </div>
+</section>

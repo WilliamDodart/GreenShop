@@ -1,0 +1,31 @@
+@use '../../../variables' as v;
+
+.toast {
+  position: fixed;
+  top: 5rem;
+  right: 2rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  color: #fff;
+  font-size: 1.5rem;
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+
+  &.success {
+    background-color: v.$green;
+  }
+
+  &.error {
+    background-color: #dc3545;
+  }
+}
+
+@media screen and (min-width : 768px) {
+  .toast {
+    top: 7rem;
+    right: 2rem
+  }
+}

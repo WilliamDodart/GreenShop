@@ -1,9 +1,17 @@
 <section class="product-filter">
+
     <div class="product-filter__container" role="group" aria-label="Filtrer par catégorie">
-        <button class="product-filter__button" type="button">Tous</button>
-        <button class="product-filter__button" type="button">Cuisine</button>
-        <button class="product-filter__button" type="button">Maison</button>
-        <button class="product-filter__button" type="button">Bien-être</button>
+
+        @for (category of categories; track category) {
+            <button
+                [ngClass]="{active: category === currentCategory}" 
+                class="product-filter__button"
+                type="button"
+                (click)="changeFilter(category)">
+                    {{category | titlecase}}
+            </button>
+        }
+
     </div>
 </section>
 
