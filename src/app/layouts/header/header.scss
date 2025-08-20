@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
     &__button-menu {
         padding: 0;
@@ -112,7 +113,19 @@
 
         &__cart {
             font-size: 2rem;
+        }
+    } 
+}
+
+@media screen and (max-width : 360px) {
+    .header {
+        flex-direction: column;
+
+        &__title {
+            font-size: 2rem;
+            margin-left: 0;
+            white-space: normal;
+            word-break: break-word;
+        }
     }
-    }
-    
 }
