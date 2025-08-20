@@ -5,15 +5,16 @@ import { CartSummary } from '../../components/cart-summary/cart-summary';
 import { CartService } from '../../services/cart.service';
 import { AsyncPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { PurchaseModal } from "../../components/purchase-modal/purchase-modal";
 
 @Component({
   selector: 'app-cart-page',
-  imports: [ ButtonBack,
-             CartCard,
-             CartSummary,
-             AsyncPipe,
-             RouterLink
-  ],
+  imports: [ButtonBack,
+    CartCard,
+    CartSummary,
+    AsyncPipe,
+    RouterLink,
+    PurchaseModal],
   templateUrl: './cart-page.html',
   styleUrl: './cart-page.scss'
 })

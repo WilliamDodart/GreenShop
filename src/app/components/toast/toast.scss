@@ -12,7 +12,7 @@
   font-size: 1.5rem;
   opacity: 0.95;
   transition: opacity 0.3s ease;
-  z-index: 1000;
+  z-index: 10;
 
   &.success {
     background-color: v.$green;
