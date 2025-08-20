@@ -10,7 +10,7 @@ GreenShop est une application web fictive que j’ai imaginée et construite pou
 ## 🌐 Démo
 Découvrez GreenShop en action :
 
-👉 [Voir l’application](https://green-shop-4d6x.vercel.app/)  
+👉 [Voir l’application](https://green-shop-blue.vercel.app/)  
 
 ---
 
