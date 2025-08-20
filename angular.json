@@ -29,8 +29,7 @@
             ],
             "styles": [
               "src/styles.scss"
-            ],
-            "outputPath": "dist/greenshop"
+            ]
           },
           "configurations": {
             "production": {
