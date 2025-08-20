@@ -14,7 +14,8 @@ import { PurchaseModal } from "../../components/purchase-modal/purchase-modal";
     CartSummary,
     AsyncPipe,
     RouterLink,
-    PurchaseModal],
+    PurchaseModal
+  ],
   templateUrl: './cart-page.html',
   styleUrl: './cart-page.scss'
 })
@@ -22,6 +23,7 @@ import { PurchaseModal } from "../../components/purchase-modal/purchase-modal";
 export class CartPage {
   cart$;
   nbProduct = 0;
+  showModal = false;
 
   constructor(private cartService: CartService) {
     this.cart$ = this.cartService.cart$
@@ -29,4 +31,8 @@ export class CartPage {
       this.nbProduct = (this.cartService.getCartProducts()).length;
     })
   };
+
+  toggleModal(): void {
+    this.showModal = !this.showModal;
+  }
 }

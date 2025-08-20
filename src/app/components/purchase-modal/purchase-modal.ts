@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-purchase-modal',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './purchase-modal.scss'
 })
 export class PurchaseModal {
-
+  @Input() isVisible = false;
+  @Output() closeModal = new EventEmitter<void>();
 }

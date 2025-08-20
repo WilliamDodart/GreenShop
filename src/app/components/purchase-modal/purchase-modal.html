@@ -1,10 +1,12 @@
-<div class="background">
-    <div class="purchase-modal">
-        <h2 class="purchase-modal__title">Oops !</h2>
-        <p class="purchase-modal__text">Ce site est uniquement un projet personnel pour tester Angular et apprendre de nouvelles choses.</p>
-        <p class="purchase-modal__text">Ici, pas de service commercial, juste du code et de la curiosité !</p>
-        <p class="purchase-modal__text purchase-modal__text--last">Merci pour votre visite de</p>
-        <p class="purchase-modal__text--greenshop">GreenShop !</p>
+@if (isVisible) {
+    <div class="background" (click)="closeModal.emit()">
+        <div class="purchase-modal" (click)="$event.stopPropagation()">
+            <button class="purchase-modal__close-button" (click)="closeModal.emit()" >X</button>
+            <h2 class="purchase-modal__title">Oops !</h2>
+            <p class="purchase-modal__text">Ce site est uniquement un projet personnel pour tester Angular et apprendre de nouvelles choses.</p>
+            <p class="purchase-modal__text">Ici, pas de service commercial, juste du code et de la curiosité !</p>
+            <p class="purchase-modal__text purchase-modal__text--last">Merci pour votre visite de</p>
+            <p class="purchase-modal__text--greenshop">GreenShop !</p>
+        </div>
     </div>
-</div>
-    
+}
