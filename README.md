@@ -50,16 +50,16 @@ git clone https://github.com/WilliamDodart/GreenShop.git
 cd greenshop
 ``` 
 
-Installer les dépendances
+2. **Installer les dépendances**
 ```bash
 npm install
 ``` 
 
-Lancer l’application en mode développement
+3. **Lancer l’application en mode développement**
 ```bash
 ng serve
 ``` 
 
-Accéder au projet : 
+4. **Accéder au projet :**
 
 Ouvrir http://localhost:4200 dans le navigateur.
